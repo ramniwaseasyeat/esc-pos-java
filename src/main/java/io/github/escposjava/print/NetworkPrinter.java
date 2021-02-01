@@ -17,7 +17,7 @@ public class NetworkPrinter implements Printer {
    public void open(){
       try {
          Socket socket = new Socket(this.address, this.port);
-         socket.setSoTimeout(1000);
+         socket.setSoTimeout(30);
          printer = socket.getOutputStream();
       } catch (IOException e) {
          e.printStackTrace();
